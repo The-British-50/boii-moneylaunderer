@@ -29,7 +29,7 @@ Config.MoneyWash = {
             },
             Item = {
                 Use = true, -- True = will take item to wash
-                Minimum = 100, -- Minimum amount required to wash
+                Minimum = 5000, -- Amount required to wash
                 Item = {name = 'black_money', label = 'Dirty Cash'}
             }
         },
@@ -46,7 +46,7 @@ Config.MoneyWash = {
     },
     Blacklist = {
         Job = { -- Blacklisted job list; these jobs will not see a blip for wash and cannot access
-            --{name = 'police'},
+            {name = 'police'},
             {name = 'ambulance'},
         }
     },
