@@ -24,13 +24,13 @@ Config.MoneyWash = {
         Time = math.random(8,15), -- Time in (s) to wait for ped to wash money
         Take = {
             Marked = { 
-                Use = true, -- True = will take marked bills to wash
+                Use = false, -- True = will take marked bills to wash
                 Item = {name = 'markedbills', label = 'Marked Bills'}
             },
             Item = {
                 Use = true, -- True = will take item to wash
                 Minimum = 5000, -- Amount required to wash
-                Item = {name = 'black_money', label = 'Dirty Cash'}
+                Item = {name = 'blackmoney', label = 'Dirty Cash'}
             }
         },
         Return = {
