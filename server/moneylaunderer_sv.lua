@@ -90,11 +90,11 @@ RegisterServerEvent('boii-moneylaunderer:sv:PayPlayer', function(amount)
     if CurrentCops ~= nil then
         percent = Config.MoneyWash.Money.Percentage
     elseif CurrentCops >= 1 and CurrentCops <= 3 then
-        percent = Config.MoneyWash.Money.Percentage+0.15
+        percent = Config.MoneyWash.Money.Percentage+0.05
     elseif CurrentCops <= 3 and CurrentCops >= 5 then
-        percent = Config.MoneyWash.Money.Percentage+0.30
+        percent = Config.MoneyWash.Money.Percentage+0.10
     elseif CurrentCops >= 7 then
-        percent = Config.MoneyWash.Money.Percentage+0.45
+        percent = Config.MoneyWash.Money.Percentage+0.15
     end
     local pay = math.floor(amount*percent)
     if Config.MoneyWash.Money.Return.Item.Use then

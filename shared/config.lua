@@ -20,7 +20,7 @@ Config.MoneyWash = {
     RequiredCops = 0, -- Amount of cops required to wash money if RequireCops = true
     Chance = 10, -- Chance to alert cops when washing
     Money = {
-        Percentage = 0.5, -- Return start % this is increased based on cop count; 1-3 = 0.65, 3-5 = 0.85, 7+ = 0.95
+        Percentage = 0.8, -- Return start % this is increased based on cop count; 1-3 = 0.65, 3-5 = 0.85, 7+ = 0.95
         Time = math.random(8,15), -- Time in (s) to wait for ped to wash money
         Take = {
             Marked = { 
@@ -28,18 +28,18 @@ Config.MoneyWash = {
                 Item = {name = 'markedbills', label = 'Marked Bills'}
             },
             Item = {
-                Use = false, -- True = will take item to wash
-                Minimum = 10000, -- Minimum amount required to wash
-                Item = {name = 'dirtycash', label = 'Dirty Cash'}
+                Use = true, -- True = will take item to wash
+                Minimum = 100, -- Minimum amount required to wash
+                Item = {name = 'black_money', label = 'Dirty Cash'}
             }
         },
         Return = {
             Money = {
-                Use = false, -- True = will return money type below
+                Use = true, -- True = will return money type below
                 Type = 'cash' -- Money type; 'cash', 'bank', 'crypto'
             },
             Item = {
-                Use = true, -- True = will return item below
+                Use = false, -- True = will return item below
                 Item = {name = 'cash', label = 'Cash'}
             }
         }
