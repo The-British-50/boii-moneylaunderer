@@ -121,7 +121,7 @@ RegisterNetEvent('boii-moneylaunderer:sv:NotifyPolice', function(player)
 	local Player = Core.Functions.GetPlayer(Players[i])
         for j = 1, #Config.MoneyWash.Services.Job, 1 do
             if Player.PlayerData.job.name == Config.MoneyWash.Services.Job[j].name then
-                TriggerClientEvent('boii-moneylaunderer:cl:NotifyPolice', Players[i], -1)
+                exports['ps-dispatch']:SuspiciousActivity()
             end
         end
 	end
