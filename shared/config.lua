@@ -18,7 +18,7 @@ Config.MoneyWash = {
     Range = 6, -- Range check for laundering
     RequireCops = false, -- True = cops required to use wash uses RequiredCops amount
     RequiredCops = 0, -- Amount of cops required to wash money if RequireCops = true
-    Chance = 10, -- Chance to alert cops when washing
+    Chance = 50, -- Chance to alert cops when washing
     Money = {
         Percentage = 0.8, -- Return start % this is increased based on cop count; 1-3 = 0.65, 3-5 = 0.85, 7+ = 0.95
         Time = math.random(8,15), -- Time in (s) to wait for ped to wash money
@@ -51,7 +51,7 @@ Config.MoneyWash = {
         }
     },
     Services = {
-        Range = 10, -- Range check to move launderer
+        Range = 20, -- Range check to move launderer
         Job = { -- Service job list; these jobs will not see a blip for wash, cannot access and will force ped to change location
             {name = 'police'},
             {name = 'ambulance'},
@@ -62,7 +62,7 @@ Config.MoneyWash = {
     },
     Blip = {
         Wash = { 
-            Use = true,
+            Use = false,
         },
     },
     Locations = {
