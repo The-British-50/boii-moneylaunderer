@@ -29,7 +29,7 @@ Config.MoneyWash = {
             },
             Item = {
                 Use = true, -- True = will take item to wash
-                Minimum = 5000, -- Amount required to wash
+                Minimum = 1000, -- Amount required to wash
                 Item = {name = 'blackmoney', label = 'Dirty Cash'}
             }
         },
